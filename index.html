@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<h2>Combination Calculator NJ</h2>
+<style>
+ h2 {color : green;}
+ label {color: green;}
+ button {color : green;}
+ #result {color: green}
+ </style>
+ <form id="fact" onsubmit="combination(); return false;">
+  <label for="n">Enter n:</label>
+  <input type = "number" id = "n" required><br>
+  <br>
+  <label for = "r">Enter r:</label>
+  <input type = "number" id = "r"
+  required><br>
+  <br>
+  <button type = "submit">Answer
+  </button>
+  </form>
+  <p id ="result"</p>
+  
+  <script>
+  function combination(){
+      function factorial(n){
+          if(n < 1){
+              return 1;
+          }
+          return n * factorial(n - 1);
+      }
+      let num1 = document.getElementById("n").value;
+      let num2 = document.getElementById("r").value;
+      let answer = factorial(num1)/(factorial(num2)*factorial(num1-num2));
+      document.getElementById("result").innerHTML = "The answer is:" +answer;
+      
+  }
+  </script>
+  </body>
+  </html>
+  
